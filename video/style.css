@@ -1,0 +1,138 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+
+}
+
+body{
+    display:grid;
+    place-items: center;
+    width: 100vw;
+    /* overflow:hidden; */
+    height: 100vh;
+}
+
+.video__cont{
+    box-shadow: 10px 10px 40px 3px rgba(0,0,0,0.34);
+    padding:40px;
+    transition:0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:20px;
+    border-radius: 10px;
+}
+.video__cont:hover{
+    
+    box-shadow: 10px 10px 50px 2px rgba(0,0,0,0.23);
+}
+
+button{
+    background: rgb(48, 209, 147);
+    border:none;
+    outline: none;
+    border-radius: 4px;
+    padding:4px;
+    cursor: pointer;
+    color: #3c3c3c;
+}
+button:hover{
+    color: #222;
+    background:rgb(0, 255, 191);
+}
+
+.controls{
+    overflow: hidden;
+    display: flex;
+    gap:20px;
+    justify-content: space-around;
+    background: transparent;
+    width: 100%;
+    height: 8.0971659919028340080971659919028%; 
+    position: relative;
+    
+}
+
+.controls[data-state="hidden"]{
+    display: none;
+}
+.controls[data-state="visible"]
+{
+    display: block;
+}
+
+
+
+.controls .video__progress{
+    cursor: pointer;
+    width:100%;
+
+}
+
+
+.controls progress{
+    display: block;
+    width: 100%;
+    height: 20px;
+    overflow:hidden;
+    color:red;
+    cursor: pointer;
+}
+
+.controls progress[data-state="fake"] {
+	background:#e6e6e6;
+	height:8px;
+}
+
+.controls progress span{
+    width: 00%;
+    height: 100%;
+    display: inline-block;
+    background-color: #2a84cd;
+}
+
+
+
+
+.controls progress::-moz-progress-bar{
+    background-color: red;
+}
+
+
+
+
+input{
+    border: 2px solid #222;
+    padding: 4px;
+    margin-top: 20px;
+    border-radius: 4px;
+    outline: none;
+    transition: 0.8s ease-in-out;
+
+}
+
+input:focus{
+    border: 2px solid rgb(238, 52, 145);
+}
+@media screen and (max-width:570px){
+
+
+figure{
+width: 400px;
+}
+input{
+    width: 350px;
+}
+
+}
+
+@media screen and (max-width:400px){
+    figure{
+        width: 300px;
+    }
+    input{
+        width: 250px;
+        margin-left: -4px;
+    }
+}

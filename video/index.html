@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Video Player</title>
+</head>
+<body>
+
+    <figure    class="video__cont" controls preload="metadata"  poster="main.png">
+        <video  id="vid"    controls>
+            <source src="video.webm"     >
+        </video>
+<div    id="video__cntrl"   class="controls" data-state="hidden">
+<button id="playpause"  type="button">Play/Pause</button>
+<button id="restart">Restart</button>
+<button id="stop">stop</button>
+<div    id="video__progress">
+    <progress   id="progress" value="0" min="0">
+        <span   id="video__progress__bar"></span>
+
+    </progress>
+    
+</div>
+<input  class="time"  placeholder="enter the time">
+</div>
+    </figure>
+    
+</body>
+<script src="app.js"></script>
+</html>
