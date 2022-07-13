@@ -1,0 +1,118 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+h3{
+  color: var(--blue--opacited);
+}
+.login {
+  min-height: 80vh;
+  min-width: 400px;
+  /* background-color: red; */
+  display: grid;
+  place-items: center;
+}
+.login__header {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: rgb(60, 97, 197);
+  padding-top: 40px;
+  font-size: 30px;
+  padding-bottom: 30px;
+}
+.login__data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+}
+
+.login__wrap,
+.data__row__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.data__row {
+  display: flex;
+  gap: 20px;
+}
+.login__wrap > label,
+.data__row__wrap > label {
+  font-family: "Roboto", sans-serif;
+  color: rgb(73, 72, 72);
+}
+.login__wrap > input,
+select,
+textarea,
+.data__row__wrap > input {
+  border: none;
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.13);
+  /* padding: 10px; */
+
+  outline: none;
+  height: 40px;
+  width: 400px;
+  border-radius: 8px;
+}
+.login__wrap > textarea {
+  min-width: 400px;
+  max-width: 400px;
+  min-height: 150px;
+}
+.data__row__wrap > input {
+  width: 185px !important;
+}
+.login__wrap > input:focus {
+  outline: 2px solid rgb(60, 97, 197);
+}
+.login__wrap > textarea:focus {
+  outline: 2px slid rgb(60, 97, 197);
+}
+.data__row__wrap > input:focus {
+  outline: 2px solid rgb(60, 97, 197);
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  width: 300px;
+  /* align-self: flex-start; */
+  height: 40px;
+  background-color: rgb(60, 97, 197);
+}
+button:hover {
+  background-color: rgb(60, 97, 220);
+}
+
+@media (max-width: 870px) {
+  .login {
+    min-width: 100vw !important;
+    max-width: 100vw !important;
+  }
+  .login__wrap > input {
+    max-width: 80vw;
+  }
+  .login__wrap > textarea {
+    min-width: 80vw !important;
+    max-width: 80vw !important;
+  }
+  .data__row {
+    display: flex;
+    flex-direction: column;
+  }
+  .data__row__wrap > input {
+    min-width: 76vw;
+  }
+}
+.error {
+  color: red;
+  font-size: 15px;
+}
+
+.ant-btn{
+  width:100px !important;
+}
